@@ -68,6 +68,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   inner.classList.add("tile-inner");
   inner.textContent = tile.value;
+  if (tile.value === 17) inner.textContent = "!";
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -131,7 +132,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "Ah, you got some 12s!" : "X";
+  var message = won ? "!" : "15";
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
@@ -158,7 +159,7 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   tweet.setAttribute("data-via", "no");
   tweet.textContent = "Tweet";
 
-  var text = "12, #advyout";
+  var text = "15, #advyout";
   tweet.setAttribute("data-text", text);
 
   return tweet;
