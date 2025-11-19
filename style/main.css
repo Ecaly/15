@@ -524,15 +524,15 @@ hr {
   .tile.tile-5 .tile-inner {
     background: #adffb1; }
   .tile.tile-6 .tile-inner {
-    background: linear-gradient(bottom, #48fa53, #48d0fa); }
+    background: linear-gradient(#48fa53, #48d0fa); }
   .tile.tile-7 .tile-inner {
-    background: linear-gradient(bottom, #48d0fa, #6c48fa); }
+    background: linear-gradient(#48d0fa, #6c48fa); }
   .tile.tile-8 .tile-inner {
-    background: linear-gradient(bottom, #6c48fa, #fa48d0); }
+    background: linear-gradient(#6c48fa, #fa48d0); }
   .tile.tile-9 .tile-inner {
-    background: linear-gradient(bottom, #fa48d0, #fa7748); }
+    background: linear-gradient(#fa48d0, #fa7748); }
   .tile.tile-10 .tile-inner {
-    background: linear-gradient(bottom, #48d0fa, #dffa48); }
+    background: linear-gradient(#fa7748, #dffa48); }
   .tile.tile-11 .tile-inner {
     color: #ffffff;
     background: radial-gradient(#18753e, transparent); }
@@ -546,16 +546,22 @@ hr {
     color: #ffffff;
     background: radial-gradient(#6b161f, transparent); }
   .tile.tile-15 .tile-inner {
-    color: #38a6eb;
+    color: #000000;
     background: radial-gradient(#6b4816, #f0a232); 
-    box-shadow: inset 0 0 0 2.5px #050505; }
+    box-shadow: inset 0 0 0 2.5px #050505; 
+    animation-name: fifteen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
   .tile.tile-16 .tile-inner {
     color: #e9ed00;
-    background: linear-gradient(top, #ffffff, #000000); }
+    background: linear-gradient(#ffffff, #000000); }
   .tile.tile-17 .tile-inner {
     color: #e80000;
     background: #eeeeee; 
-    box-shadow: inset 0 0 0 2.5px #050505; }
+    box-shadow: inset 0 0 0 2.5px #050505; 
+    animation-name: bang;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
   .tile.tile-81 .tile-inner {
     color: #4ceb31;
     background: #08044a; }
@@ -572,6 +578,23 @@ hr {
     color: #d65c72;
     background: #611f34; }
 
+@keyframes fifteen {
+  0% {background: #f0a232;}
+  25% {background: #f04c32;}
+  50% {background: #f0a232;}
+  75% {background: #f04c32;}
+  100% {background: #f0a232;}
+
+}
+
+@keyframes bang {
+  0% {background: #eeeeee;}
+  25% {background: #ded9d8;}
+  50% {background: #eeeeee;}
+  75% {background: #ded9d8;}
+  100% {background: #eeeeee;}
+
+  }
 
 @-webkit-keyframes appear {
   0% {
