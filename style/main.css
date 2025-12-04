@@ -509,6 +509,10 @@ hr {
     font-weight: bold;
     z-index: 10;
     font-size: 31px; }
+  .tile.tile--5 .tile-inner {
+    background: #37d94b; }
+  .tile.tile--2 .tile-inner {
+    background: #f17474; }
   .tile.tile-0 .tile-inner {
     color: #00ffbb;
     background: #050505; 
@@ -546,12 +550,9 @@ hr {
     color: #ffffff;
     background: radial-gradient(#6b161f, transparent); }
   .tile.tile-15 .tile-inner {
-    color: #000000;
-    background: radial-gradient(#6b4816, #f0a232); 
-    box-shadow: inset 0 0 0 2.5px #050505; 
-    animation-name: fifteen;
-    animation-duration: 3s;
-    animation-iteration-count: infinite; }
+    color: #11115d;
+    background: linear-gradient(#bb2e2e, #69d95c); 
+    box-shadow: inset 0 0 0 2.5px #050505; }
   .tile.tile-16 .tile-inner {
     color: #e9ed00;
     background: linear-gradient(#ffffff, #000000); }
@@ -562,6 +563,30 @@ hr {
     animation-name: bang;
     animation-duration: 3s;
     animation-iteration-count: infinite; }
+  .tile.tile-18 .tile-inner {
+    color: #00e832;
+    background: #eeeeee; 
+    box-shadow: inset 0 0 0 2.5px #050505; 
+    animation-name: bang;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
+  .tile.tile-19 .tile-inner {
+    color: #ffffff;
+    background: radial-gradient(#6b5d16, transparent);
+    box-shadow: inset 0 0 0 2.5px #050505;
+    font-size: 24px; }
+  .tile.tile-20 .tile-inner {
+    color: #4bff491c;
+    background: linear-gradient(45deg,#e0d22b, #173d06 36px); 
+    font-size: 20px; }
+  .tile.tile-74 .tile-inner {
+    color: #6f30ba;
+    background: linear-gradient(#131f74, #551854); 
+    box-shadow: inset 0 0 0 2.5px #180f3b; }
+  .tile.tile-75 .tile-inner {
+    color: #8d1563;
+    background: linear-gradient(#5d819f, #e5d87b); 
+    box-shadow: inset 0 0 0 2.5px #f4efef; }
   .tile.tile-81 .tile-inner {
     color: #4ceb31;
     background: #08044a; }
@@ -577,6 +602,20 @@ hr {
   .tile.tile-85 .tile-inner {
     color: #d65c72;
     background: #611f34; }
+  .tile.tile-111 .tile-inner {
+    background: #975f82; }
+  .tile.tile-8282 .tile-inner {
+    color: #ab7f67;
+    background: #edc4ad; 
+    font-size: 23px; }
+  .tile.tile-828282 .tile-inner {
+    color: #ab7f67;
+    background: #654636; 
+    font-size: 15px; }
+  .tile.tile-82828282 .tile-inner {
+    color: #c69e87;
+    background: #f4d4c2; 
+    font-size: 11.5px; }
 
 @keyframes fifteen {
   0% {background: #f0a232;}
