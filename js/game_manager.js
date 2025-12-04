@@ -59,10 +59,14 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.999999999 ? Math.random() < 0.999999999 ? Math.random() < 0.999999999 ? Math.random() < 0.999999999 ? Math.random() < 0.999999999 ? Math.random() < 0.99999999 ? Math.random() < 0.9999999655172413793103448 ? Math.random() < 0.99999996428571428571428571 ? Math.random() < 0.9999999615384615384615384 ? Math.random() < 0.99999996 ? Math.random() < 0.999999958333333333333333333 ? Math.random() < 0.9999995 ? Math.random() < 0.999999 ? Math.random() < 0.99999848484848484848484 ? Math.random() < 0.99999818181818181818181 ? Math.random() < 0.999997727272727272727272 ? Math.random() < 0.99999696969696969696969 ? Math.random() < 0.999992 ? Math.random() < 0.99999 ? Math.random() < 0.99998666666666666666666 ? Math.random() < 0.99998 ? Math.random() < 0.99996 ? Math.random() < 0.9999090909090909090909 ? Math.random() < 0.999848484848484848484 ? Math.random() < 0.999696969696969696969 ? Math.random() < 0.99848484848484848484 ? 1 : 2 : 3 : 4 : 5 : 6 : 7 : 8 : 9 : 10 : 11 : 12 : 13 : 14 : 15 : 17 : 81 : 82 : 83 : 84 : 85 : 16 : 0 : 0 : 0 : 0 : 0;
+    var value = Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999999 ? Math.random() < 0.999999999879256218304757304 ? Math.random() < 0.99999999878048780487804878 ? Math.random() < 0.999999995 ? Math.random() < 0.99999999099099099099099099 ? Math.random() < 0.99999999 ? Math.random() < 0.9999999878048780487804878 ? Math.random() < 0.99999998 ? Math.random() < 0.9999999655172413793103448 ? Math.random() < 0.99999996428571428571428571 ? Math.random() < 0.9999999615384615384615384 ? Math.random() < 0.99999996 ? Math.random() < 0.999999958333333333333333333 ? Math.random() < 0.9999999 ? Math.random() < 0.9999998 ? Math.random() < 0.9999995 ? Math.random() < 0.9999992 ? Math.random() < 0.999999 ? Math.random() < 0.9999988636363636363636363 ? Math.random() < 0.99999848484848484848484 ? Math.random() < 0.99999818181818181818181 ? Math.random() < 0.999998 ? Math.random() < 0.999997727272727272727272 ? Math.random() < 0.99999696969696969696969 ? Math.random() < 0.999992 ? Math.random() < 0.99999 ? Math.random() < 0.99998666666666666666666 ? Math.random() < 0.99998 ? Math.random() < 0.99996 ? Math.random() < 0.9999090909090909090909 ? Math.random() < 0.999848484848484848484 ? Math.random() < 0.999696969696969696969 ? Math.random() < 0.99848484848484848484 ? 1 : 2 : 3 : 4 : 5 : 6 : 7 : 8 : 9 : 10 : 11 : 12 : -5 : 13 : 14 : 19 : 15 : -2 : 17 : 75 : 18 : 81 : 82 : 83 : 84 : 85 : 74 : 8282 : 16 : 111 : 20 : 828282 : 82828282 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 0;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 	if (tile.value === 16) this.over = true;
+	if (tile.value === 20) this.won = true;
 	if (tile.value === 82) this.won = true;
+	if (tile.value === 8282) this.won = true;
+	if (tile.value === 828282) this.won = true;
+	if (tile.value === 82828282) this.won = true;
 
     this.grid.insertTile(tile);
   }
@@ -144,11 +148,11 @@ GameManager.prototype.move = function (direction) {
           // The mighty tiles
       if (merged.value === 15) self.over = true;
 	  if (merged.value === 17) self.won = true;
-	  if (merged.value === 81) self.won = true;
-	  if (merged.value === 82) self.won = true;
-	  if (merged.value === 83) self.won = true;
-	  if (merged.value === 84) self.won = true;
-	  if (merged.value === 85) self.won = true;
+	  if (merged.value === 18) self.won = true;
+	  if (merged.value === -2) Math.random() < 0.5 ? self.over = true : self.won = true;
+	  if (merged.value === -5) Math.random() < 0.8 ? self.over = true : self.won = true;
+	  if (merged.value === 74) self.won = true;
+	  if (merged.value === 75) self.over = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
